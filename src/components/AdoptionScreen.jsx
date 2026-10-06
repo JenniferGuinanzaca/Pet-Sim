@@ -1,13 +1,6 @@
 
-function AdoptionScreen({
-  petType,
-  setPetType,
-  petName,
-  setPetName,
-  onAdopt,
-}) {
-
-    return (
+function AdoptionScreen({petType,setPetType,petName,setPetName,onAdopt,}) {
+return (
         <main className="adoption-screen">
         <header className="site-header">
             <h1>nook</h1>
@@ -20,13 +13,13 @@ function AdoptionScreen({
 
         <section className="pet-choices">
             <button className={`pet-card ${petType === "cat" ? "selected" : ""}`} onClick={() => setPetType("cat")}>
-            <span className="pet-icon">🐱</span>
-            <span className="pet-type">cat</span>
+                <span className="pet-icon">🐱</span>
+                <span className="pet-type">cat</span>
             </button>
 
             <button className={`pet-card ${petType === "dog" ? "selected" : ""}`} onClick={() => setPetType("dog")}>
-            <span className="pet-icon">🐶</span>
-            <span className="pet-type">dog</span>
+                <span className="pet-icon">🐶</span>
+                <span className="pet-type">dog</span>
             </button>
         </section>
 
