@@ -1,8 +1,12 @@
-import { useState } from "react";
 
-function AdoptionScreen({onAdopt}) {
-    const [petType, setPetType] = useState("");
-    const [petName, setPetName] = useState("");
+function AdoptionScreen({
+  petType,
+  setPetType,
+  petName,
+  setPetName,
+  onAdopt,
+}) {
+
     return (
         <main className="adoption-screen">
         <header className="site-header">
