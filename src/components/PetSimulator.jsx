@@ -1,7 +1,13 @@
+import { useState } from "react";
 import Header from "./Header";
 import PetDisplay from "./PetDisplay";
+import PetStats from "./PetStats";
 
 function PetSimulator({ petType, petName }) {
+    const [hunger, setHunger] = useState(100);
+    const [energy, setEnergy] = useState(100);
+    const [happiness, setHappiness] = useState(100);
+
   return (
     <main className="pet-simulator">
       <Header />
@@ -11,9 +17,11 @@ function PetSimulator({ petType, petName }) {
         petName={petName}
       />
 
-      <section className="pet-stats">
-        <h2>Stats</h2>
-      </section>
+      <PetStats 
+        hunger={hunger}
+        energy={energy}
+        happiness={happiness}
+      />
 
       <section className="pet-shop">
         <h2>Shop</h2>
