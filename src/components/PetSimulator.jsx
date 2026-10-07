@@ -4,12 +4,14 @@ import PetDisplay from "./PetDisplay";
 import PetStats from "./PetStats";
 import Actions from "./Actions";
 import Shop from "./Shop";
+import Inventory from "./Inventory";
 
 function PetSimulator({ petType, petName }) {
-    const [hunger, setHunger] = useState(100);
-    const [energy, setEnergy] = useState(100);
-    const [happiness, setHappiness] = useState(100);
-    const [coins, setCoins] = useState(100);
+    const [hunger, setHunger] = useState(35);
+    const [energy, setEnergy] = useState(50);
+    const [happiness, setHappiness] = useState(60);
+    const [coins, setCoins] = useState(50);
+    const [inventory, setInventory] = useState([]);
 
   return (
     <main className="pet-simulator">
@@ -40,8 +42,20 @@ function PetSimulator({ petType, petName }) {
      <Shop 
             coins={coins}
             setCoins={setCoins}
+            inventory={inventory}
+            setInventory={setInventory}
      />
      
+     <Inventory 
+            inventory={inventory}
+            setInventory={setInventory}
+            hunger={hunger}
+            energy={energy}
+            happiness={happiness}
+            setHunger={setHunger}
+            setEnergy={setEnergy}
+            setHappiness={setHappiness}
+     />
     </main>
   );
 }

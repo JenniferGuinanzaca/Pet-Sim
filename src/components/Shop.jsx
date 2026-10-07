@@ -1,13 +1,14 @@
 import shopItems from "../data/shop";
 import ShopItem from "./ShopItems";
 
-function Shop({ coins, setCoins }) {
+function Shop({ coins, setCoins, inventory, setInventory }) {
   function buyItem(item) {
     if (coins < item.price) {
       return;
     }
 
     setCoins(coins - item.price);
+    setInventory([...inventory, { ...item, quantity: 1 }]);
   }
 
   return (
