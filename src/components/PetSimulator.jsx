@@ -3,15 +3,19 @@ import Header from "./Header";
 import PetDisplay from "./PetDisplay";
 import PetStats from "./PetStats";
 import Actions from "./Actions";
+import Shop from "./Shop";
 
 function PetSimulator({ petType, petName }) {
     const [hunger, setHunger] = useState(100);
     const [energy, setEnergy] = useState(100);
     const [happiness, setHappiness] = useState(100);
+    const [coins, setCoins] = useState(100);
 
   return (
     <main className="pet-simulator">
-      <Header />
+      <Header
+            coins={coins}
+      />
 
       <PetDisplay
             petType={petType}
@@ -33,9 +37,11 @@ function PetSimulator({ petType, petName }) {
             setHappiness={setHappiness}
       />
       
-     <section className="pet-shop">
-            <h2>Shop</h2>
-      </section>
+     <Shop 
+            coins={coins}
+            setCoins={setCoins}
+     />
+     
     </main>
   );
 }

@@ -1,9 +1,10 @@
-function Header(){
-    return (
-        <header className="sim-header">
-            <h1>Nook</h1>
-        </header>
-    );
+function Header({ coins }) {
+  return (
+    <header className="sim-header">
+      <h1>Nook</h1>
+      <span className="coin-count">🪙 {coins}</span>
+    </header>
+  );
 }
 
 export default Header;

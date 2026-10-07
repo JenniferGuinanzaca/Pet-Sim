@@ -1,12 +1,12 @@
 function Actions({ hunger, energy, happiness, setHunger, setEnergy, setHappiness}){
 
     function feedPet(){
-        setHunger(Math.min(hunger + 20, 100));
+        setHunger(Math.min(hunger + 10, 100));
     }
 
     function playWithPet(){
         setEnergy(Math.max(energy - 10, 0));
-        setHappiness(Math.min(happiness + 20, 100));
+        setHappiness(Math.min(happiness + 10, 100));
     }
 
     function putToSleep(){
