@@ -15,8 +15,11 @@ function Inventory({ inventory, setInventory, hunger,energy,happiness, setHunger
         setHappiness(Math.min(happiness + 5, 100));
     }
 
-    setInventory(inventory.filter((inventoryItem) => inventoryItem !== item));
- }
+    setInventory(inventory.map((inventoryItem)=>
+        inventoryItem.id === item.id? { ...inventoryItem, quantity: inventoryItem.quantity - 1 }: inventoryItem)
+        .filter((inventoryItem) => inventoryItem.quantity > 0)
+  );
+}
 
  if (inventory.length === 0) {
     return (

@@ -3,13 +3,22 @@ import ShopItem from "./ShopItems";
 
 function Shop({ coins, setCoins, inventory, setInventory }) {
   function buyItem(item) {
-    if (coins < item.price) {
-      return;
-    }
+        if (coins < item.price) {
+        return;
+  }
 
-    setCoins(coins - item.price);
+  setCoins(coins - item.price);
+
+  const existingItem = inventory.find(
+    (inventoryItem) => inventoryItem.id === item.id
+  );
+
+  if (existingItem) {setInventory(inventory.map((inventoryItem) =>
+    inventoryItem.id === item.id? { ...inventoryItem, quantity: inventoryItem.quantity + 1 }: inventoryItem));
+  } else {
     setInventory([...inventory, { ...item, quantity: 1 }]);
   }
+}
 
   return (
     <section className="pet-shop">
