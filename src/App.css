@@ -1,1 +1,161 @@
 /* Nook app styles will go here */
+
+:root{
+    --cream:#f6f1e8;
+    --cream-dark:#eee6d8;
+    --sage:#a8b49a;
+    --sage-dark:#7d8d70;
+    --olive:#3f463d;
+    --brown:#786653;
+    --beige:#e3d8c7;
+    --white:#fffdf8;
+}
+
+#root{
+    min-height:100vh;
+    background:var(--cream);
+    color:var(--olive);
+}
+
+button{
+    border:none;
+    transition:0.2s ease;
+}
+
+button:not(:disabled):hover{
+    transform: translateY(-2px);
+}
+
+button:focus-visible,
+input:focus-visible{
+    outline: 3px solid var(--sage);
+    outline-offset:3px;
+}
+
+
+/* ADOPTION SCREEN!! */
+
+.adoption-screen{
+    width:min(100% - 40px,900px);
+    min-height:100vh;
+    margin:0 auto;
+    padding:28px 0 60px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.site-header{
+    width:100%;
+    padding-bottom:24px;
+    border-bottom: 1px solid var(--beige);
+}
+
+.site-header h1
+.sim-header h1{
+    margin:0;
+    color:var(--olive);
+    font-family:georgia,"Times New Roman",serif;
+    font-size:2.5 rem;
+    letter-spacing: -2px;
+}
+
+.welcome{
+    margin: 60px 0 32px;
+    text-align:center;
+}
+
+.eyebrow{
+    color:var(--sage-dark);
+    font-size:0.75rem;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.welcome h2{
+    margin:12px 0;
+    font-family:georgia,"Times New Roman",serif;
+    font-size: clamp(2rem, 5vw,3.2rem);
+    font-weight:400;
+}
+
+.pet-choices{
+    display:grid;
+    grid-template-columns: repeat(2,minmax(0,fr));
+    gap:20px;
+    width:min(100%,520px);
+}
+
+.pet-card{
+    min-height:190px;
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    background:var(--white);
+    border:2px solid transparent;
+    border-radius:22px;
+    color:var(--olive);
+}
+
+.pet-card:hover,
+.pet-card.selected{
+    border-color:var(--sage-dark);
+    background: #edf0e7;
+}
+
+.pet-card,pet-icon{
+    font-size:4rem;
+}
+
+.pet-type{
+    font-size:1.1rem;
+    font-weight:700;
+    text-transform:capitalize;
+}
+
+.pet-name{
+    width:min(100%,520px);
+    margin-top:32px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.pet-name label{
+    font-size:0.9rem;
+    font-weight:700;
+}
+
+.pet-name input{
+    width:100%;
+    padding: 15px 16px;
+    background: var(--white);
+    border: 1px solid var(--beige);
+    border-radius:12px;
+}
+
+.pet-name input:focus{
+    border-color:var(--sage-dark);
+    outline:none;
+}
+
+.adopt-button{
+    width:min(100%,520px);
+    margin-top:22px;
+    padding:16px 24px;
+    border-radius:14px;
+    background:var(--sage-dark);
+    color:white;
+    font-weight:700;
+}
+
+.adopt-button:not(:disabled):hover{
+    background:var(--olive);
+}
+
+.adopt-button:disabled{
+    opacity:0.45;
+}
