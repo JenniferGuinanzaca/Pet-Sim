@@ -159,3 +159,65 @@ input:focus-visible{
 .adopt-button:disabled{
     opacity:0.45;
 }
+
+/* simulator dashboard */
+
+.pet-simulator{
+    width:min(100% - 40px,1100px);
+    margin:0 auto;
+    padding:28px 0 56px;
+    display:grid;
+    grid-template-columns: minmax(0,1.2fr) minmax(0,0.8fr);
+    gap:24px;
+    align-items:start;
+}
+
+.sim-header{
+    grid-column: 1 / -1;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding-bottom:22px;
+    border-bottom:1px solid var(--beige);
+}
+
+.coin-count{
+    padding: 10px 16px;
+    border:1px solid var(--beige);
+    border-radius:30px;
+    background:var(--white);
+    font-weight:700;
+}
+
+
+/* pet display */
+
+.pet-area{
+    min-height:300px;
+    padding:34px 24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:var(--sage);
+    border-radius:26px;
+}
+
+.pet-area .pet-icon{
+    font-size:clamp(5rem,12vw,8rem);
+    line-height:1.2;
+}
+
+.pet-area h2{
+    margin:18px 0 4px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:2rem;
+    font-weight:400;
+}
+
+.pet-area p{
+    margin:0;
+    color:#475341;
+    text-transform:capitalize;
+}
