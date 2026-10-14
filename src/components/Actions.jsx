@@ -7,7 +7,7 @@ function Actions({ hunger, energy, happiness, setHunger, setEnergy, setHappiness
     function playWithPet(){
         setEnergy(Math.max(energy - 10, 0));
         setHappiness(Math.min(happiness + 10, 100));
-        setHunger(Math.max(hunger - 10, 0));
+        setHunger(Math.max(hunger - 5, 0));
     }
 
     function putToSleep(){
