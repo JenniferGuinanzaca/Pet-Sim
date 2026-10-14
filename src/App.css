@@ -221,3 +221,52 @@ input:focus-visible{
     color:#475341;
     text-transform:capitalize;
 }
+
+/* pet stats w/ progress bars */
+
+.pet-stats{
+    padding:24px;
+    background:var(--white);
+    border:1px solid var(--beige);
+    border-radius:22px;
+}
+
+.pet-stats h2,
+.pet-actions h2,
+.pet-shop h2,
+.inventory h2{
+    margin: 0 0 22px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1.55rem;
+    font-weight:400;
+}
+
+.stat{
+    margin-bottom:22px
+}
+
+.stat:last-child{
+    margin-bottom:0;
+}
+
+.stat-label{
+    margin-bottom: 9px;
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    font-size:0.9rem;
+}
+
+.stat-bar{
+    height:10px;
+    overflow:hidden;
+    background:var(--cream-dark );
+    border-radius:20px;
+}
+
+.stat-fill{
+    height:100%;
+    background:var(--sage-dark);
+    border-radius:inherit;
+    transition: width 250ms ease;
+}
